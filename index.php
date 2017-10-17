@@ -248,16 +248,6 @@
 
 
 <!-- Start Functiom Here -->
-<?php
-if(isset($_POST['submit'])){
-
-//GET DATA FROM INPUT FORM
-$title = $_POST['title'];
-$year = $_POST['year'];
-$quality = $_POST['quality'];
-$link = $_POST['link'];
-
-$long_url = urlencode($link);
 
 //API ID
 $long_url = urlencode('yourdestinationlink.com');
