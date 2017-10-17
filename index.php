@@ -279,7 +279,6 @@ $short_url = $bitly_response->data->url;
   <div class="row">
     <div align="center">
       <h2>Your Short Link Here</h2>      
-	  <p><?php echo $title; ?> (<?php echo $year; ?>)(<?php echo $quality; ?>)</p> 
       <p>Link : <a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
 	  
 
