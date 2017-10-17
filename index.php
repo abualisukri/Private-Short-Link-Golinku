@@ -260,11 +260,11 @@ $link = $_POST['link'];
 $long_url = urlencode($link);
 
 //API ID
-$bitly_login = 'movisubmalay'; 
-$bitly_apikey = 'R_c1e0557b7ea04e349a50864ed201ec26';
+$bitly_login = ''; 
+$bitly_apikey = 'a0d199e98c4618ad3b8fd7d362ff689cdb7aacc9';
 
 //GET API ID AND SHORT
-$bitly_response = json_decode(file_get_contents("http://api.bit.ly/v3/shorten?login=$bitly_login&apiKey=$bitly_apikey&longUrl=$long_url&format=json"));
+$bitly_response = json_decode(file_get_contents("https://golinku.com/api/?api=a0d199e98c4618ad3b8fd7d362ff689cdb7aacc9&url=yourdestinationlink.com&alias=CustomAlias"));
 
 $short_url = $bitly_response->data->url;
 
