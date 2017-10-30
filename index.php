@@ -227,7 +227,32 @@
   
   <!-- Form Start -->
   <form action="" method="post">
-  
+  <div class="form-group">
+    <div class="col-xs-3">
+    <label for="exampleFormControlInput1">Movie Title</label>
+    <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
+	</div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+    <label for="exampleFormControlInput1">Movie Year</label>
+    <input type="text" name="year" class="form-control" id="exampleFormControlInput1">
+	</div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-3">
+    <label for="exampleFormControlSelect1">Movie Quality</label>
+    <select name="quality" class="form-control" id="exampleFormControlSelect1">
+	  <option></option>
+      <option value="Bluray">Bluray</option>
+      <option value="WEB-DL">WEB-DL</option>
+	  <option value="WEBRIP">WEBRIP</option>
+      <option value="HDRIP">HDRIP</option>
+	  <option value="HDTV">HDTV</option>
+      <option value="HDTC">HDTC</option>
+      <option value="HDTS">HDTS</option>
+	  <option value="HDCAM">HDCAM</option>
+	  
     </select>
 	</div>
   </div>  
@@ -248,17 +273,25 @@
 
 
 <!-- Start Functiom Here -->
+<?php
+if(isset($_POST['submit'])){
+
+//GET DATA FROM INPUT FORM
+$title = $_POST['title'];
+$year = $_POST['year'];
+$quality = $_POST['quality'];
+$link = $_POST['link'];
+
+$long_url = urlencode($link);
 
 //API ID
-$long_url = urlencode('yourdestinationlink.com');
-$api_token = $user->a0d199e98c4618ad3b8fd7d362ff689cdb7aacc9;
-$api_url = "https://golinku.com/api/?api={$a0d199e98c4618ad3b8fd7d362ff689cdb7aacc9}&url={$long_url}&alias=CustomAlias";
-$result = @json_decode(file_get_contents($api_url),TRUE);
-if($result["status"] === 'error') {
- echo $result["message"];
-} else {
- echo $result["shortenedUrl"];
-}
+$bitly_login = 'abualisukri'; 
+$bitly_apikey = 'R_a727c76409c74bf6a6bf6ed1f759657e';
+
+//GET API ID AND SHORT
+$bitly_response = json_decode(file_get_contents("http://api.bit.ly/v3/shorten?login=$bitly_login&apiKey=$bitly_apikey&longUrl=$long_url&format=json"));
+
+$short_url = $bitly_response->data->url;
 
 
 ?>
@@ -271,8 +304,13 @@ if($result["status"] === 'error') {
   <div class="row">
     <div align="center">
       <h2>Your Short Link Here</h2>      
-      <p>Link : <a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
-	  
+	  <p><?php echo $title; ?> (<?php echo $year; ?>)(<?php echo $quality; ?>)</p>
+	  <p>Link Download & Subtitle Malay <span></span></p> 
+      <p><a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
+	   <p>Tutorial : <span>bit.ly/cara_muat_turun</span></p> 
+	   <p>Join Us : <span>bit.ly/movisubmalay</span></p> 
+	   <br><br>
+         <span class="label label-warning">create by alisukri</span> 
 
     </div>   
   </div>
