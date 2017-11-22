@@ -235,7 +235,7 @@
   </div>
   <div class="form-group">
     <div class="col-xs-3">
-    <label for="exampleFormControlInput1">Movie Year</label>
+    <label for="exampleFormControlInput1">Genre | Rate</label>
     <input type="text" name="year" class="form-control" id="exampleFormControlInput1">
 	</div>
   </div>
@@ -244,7 +244,7 @@
     <label for="exampleFormControlSelect1">Movie Quality</label>
     <select name="quality" class="form-control" id="exampleFormControlSelect1">
 	  <option></option>
-      <option value="Bluray">Bluray</option>
+      <option value="Bluray">BluRay</option>
       <option value="WEB-DL">WEB-DL</option>
 	  <option value="WEBRIP">WEBRIP</option>
       <option value="HDRIP">HDRIP</option>
@@ -304,7 +304,8 @@ $short_url = $bitly_response->data->url;
   <div class="row">
     <div align="center">
       <h2>Your Short Link Here</h2>      
-	  <p><?php echo $title; ?> (<?php echo $quality; ?>)</p>
+	  <p><?php echo $title; ?>(<?php echo $quality; ?>)</p> 
+	  <p><?php echo $year; ?></p> 
 	  <p>SariKata Malay (Stream) <span></span></p> 
       <p><a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
 	   <p>Tutorial: <span>bit.ly/cara_muat_turun</span></p> 
