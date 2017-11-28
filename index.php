@@ -244,7 +244,7 @@
     <label for="exampleFormControlSelect1">Movie Quality</label>
     <select name="quality" class="form-control" id="exampleFormControlSelect1">
 	  <option></option>
-      <option value="Bluray">BluRay</option>
+      <option value="Bluray">BLURAY</option>
       <option value="WEB-DL">WEB-DL</option>
 	  <option value="WEBRIP">WEBRIP</option>
       <option value="HDRIP">HDRIP</option>
@@ -306,10 +306,7 @@ $short_url = $bitly_response->data->url;
       <h2>Your Short Link Here</h2>      
 	  <p><?php echo $title; ?>(<?php echo $quality; ?>)</p> 
 	  <p><?php echo $year; ?></p> 
-	  <p>SariKata Malay (Stream) <span></span></p> 
       <p><a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
-	   <p>Tutorial: <span>bit.ly/cara_muat_turun</span></p> 
-	   <p>Join Us: <span>t.me/layanmoviesubmalay</span></p> 
 	   <br><br>
          <span class="label label-warning">create by alisukri</span> 
 
