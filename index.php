@@ -244,10 +244,10 @@
     <label for="exampleFormControlSelect1">Movie Quality</label>
     <select name="quality" class="form-control" id="exampleFormControlSelect1">
 	  <option></option>
-      <option value="BLURAY">BLURAY</option>
+      <option value="Bluray">BLURAY</option>
       <option value="WEB-DL">WEB-DL</option>
-	  <option value="WEBRIP">WEBRIP</option>
-      <option value="HDRIP">HDRIP</option>
+	  <option value="WEBRip">WEBRIP</option>
+      <option value="HDRip">HDRIP</option>
 	  <option value="HDTV">HDTV</option>
       <option value="HDTC">HDTC</option>
       <option value="HDTS">HDTS</option>
