@@ -307,7 +307,7 @@ $short_url = $bitly_response->data->url;
       <h2>Your Short Link Here</h2>      
 	  <p><?php echo $title; ?>(<?php echo $quality; ?>)</p> 
 	  <p><?php echo $year; ?></p> 
-	  <p>Stream Subtitle Malay <span></span></p>
+	  <p>MalaySub (Stream) <span></span></p>
       <p><a href="<?php echo $short_url; ?>"><span><?php echo $short_url; ?></span></a></p> 
 	   <br><br>
          <span class="label label-warning">create by alisukri</span> 
